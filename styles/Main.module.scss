@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.root {
+  padding: 0 5%;
+  margin: auto;
+  &_checkout_page {
+    position: relative;
+    background-color: $light-gray;
+    padding-bottom: 7rem !important;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .root {
+    padding: 0 15%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .root {
+    padding: 0 10%;
+  }
+}

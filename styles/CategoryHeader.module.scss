@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.root {
+  color: $white;
+  background-color: $black;
+  font-family: Helvetica;
+  font-size: 1.75rem;
+  letter-spacing: 0.125rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    padding: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    padding: 5rem;
+  }
+}

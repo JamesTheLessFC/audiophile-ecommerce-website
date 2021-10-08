@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+.root {
+  width: 90%;
+  color: $red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-radius: 5px;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  & button {
+    background-color: transparent;
+    opacity: 0.5;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  & p {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  & div:first-child {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .root {
+    width: 22rem;
+  }
+}

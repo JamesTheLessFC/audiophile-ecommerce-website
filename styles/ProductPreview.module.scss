@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+.image_container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  &_mobile {
+    padding-bottom: 107.65%;
+  }
+  &_tablet {
+    display: none;
+    padding-bottom: 51.09%;
+  }
+  &_desktop {
+    display: none;
+    padding-bottom: 51.85%;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.root {
+  text-align: center;
+  margin-bottom: 7rem;
+  &:last-child {
+    margin-bottom: 4rem;
+  }
+  & h4 {
+    font-size: 0.875rem;
+    color: $orange;
+    letter-spacing: 0.625rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+  }
+  & h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0.0625rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  & p {
+    opacity: 0.5;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    line-height: 1.5625rem;
+    margin: 1.5rem 0 0 0;
+  }
+  & button {
+    font-size: 0.8125rem;
+    color: #ffffff;
+    letter-spacing: 0.0625rem;
+    background-color: $orange;
+    border: none;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0 0 0;
+    &:hover {
+      background-color: $light-orange;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    & p {
+      width: 80%;
+      margin: 2rem auto 0 auto;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .image_container {
+    margin-bottom: 3rem;
+    &_mobile {
+      display: none;
+    }
+    &_tablet {
+      display: inline-block;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    & p {
+      width: 100%;
+    }
+    & .text {
+      padding-left: 10%;
+    }
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      & .text {
+        padding-right: 10%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .image_container {
+    min-width: 50%;
+    margin-bottom: 0;
+    &_tablet {
+      display: none;
+    }
+    &_desktop {
+      display: inline-block;
+    }
+  }
+}

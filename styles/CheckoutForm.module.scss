@@ -1,0 +1,184 @@
+@import "./variables.scss";
+
+.root {
+  background-color: $white;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  & h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0.0625rem;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  & h2 {
+    font-size: 0.8125rem;
+    color: $orange;
+    letter-spacing: 0.058125rem;
+    line-height: 1.5625rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 1.5rem 0 1rem 0;
+  }
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+  }
+  & label,
+  & .error {
+    font-size: 0.75rem;
+    letter-spacing: -0.013125rem;
+    color: $black;
+    margin-bottom: 0.5rem;
+  }
+  & input {
+    font-size: 0.875rem;
+    color: $input-gray;
+    letter-spacing: 0.015625rem;
+  }
+  & input[type="text"] {
+    height: 3.125rem;
+    padding-left: 1rem;
+    border-radius: 5px;
+    border: 1px solid $input-border-gray;
+    &:focus {
+      outline-color: $orange;
+    }
+  }
+}
+
+.shipping_info {
+  & div:first-child {
+    min-width: 100%;
+  }
+}
+
+.radios {
+  min-width: calc(50% - 0.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.radio {
+  height: 3.125rem;
+  border: 1px solid $input-border-gray;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  & * {
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked + label::before {
+      border-color: $orange;
+    }
+    &:checked + label::after {
+      transform: scale(1) translate(0%, -50%);
+    }
+  }
+  label {
+    position: relative;
+    padding: 0 2rem;
+    margin-bottom: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    color: $black;
+    letter-spacing: 0.015625rem;
+    font-weight: normal;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+    }
+    &:before {
+      left: 0;
+      top: 50%;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid $input-border-gray-transparent;
+      transform: translate(0%, -50%);
+    }
+    &:after {
+      top: 50%;
+      left: 0.25rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      transform: scale(0);
+      background-color: $orange;
+    }
+  }
+  &_checked,
+  &:hover {
+    border-color: $orange;
+  }
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.cash_on_delivery_note {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  & .image {
+    min-width: 4rem;
+    min-height: 4rem;
+    position: relative;
+    margin-right: 2rem;
+  }
+  & p {
+    opacity: 0.5;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    line-height: 1.5625rem;
+    margin: 0;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: calc(50% - 0.5rem);
+  margin-bottom: 1.25rem;
+  &_with_error {
+    & input[type="text"] {
+      border-color: $red;
+    }
+    & .label_container {
+      & label,
+      & span {
+        color: $red;
+      }
+    }
+  }
+}
+
+.label_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    fieldset {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    width: 60%;
+  }
+}

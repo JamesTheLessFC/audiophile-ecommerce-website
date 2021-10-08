@@ -1,0 +1,9 @@
+.menu_section {
+  margin: 2rem 0 5rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu_section {
+    margin: 0;
+  }
+}

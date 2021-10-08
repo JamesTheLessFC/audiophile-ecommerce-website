@@ -1,0 +1,132 @@
+@import "./variables.scss";
+
+.root {
+  margin-top: 7rem;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  position: relative;
+  &_checkout_page {
+    margin-top: 0;
+  }
+  & ul {
+    list-style: none;
+    padding: 0.5rem 0 0 0;
+    & li {
+      margin: 1rem;
+      & a {
+        font-size: 0.8125rem;
+        letter-spacing: 0.125rem;
+        line-height: 1.5625rem;
+        text-transform: uppercase;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+  & p {
+    opacity: 0.5;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    line-height: 1.5625rem;
+    margin: 2rem 0;
+  }
+}
+
+.rectangle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 0.25rem;
+  width: 6rem;
+  background-color: $orange;
+  transform: translate(-50%, 0%);
+}
+
+.logo {
+  width: 100%;
+  height: 1.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.iconsContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  & a {
+    &:hover {
+      color: $orange;
+    }
+    &:nth-child(2) {
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    padding: 1.5rem 3rem 3rem 3rem;
+    & ul {
+      display: flex;
+      padding: 0;
+      margin: 2rem 0;
+      & li {
+        margin: 0 2rem 0 0;
+      }
+    }
+    & p {
+      text-align: left;
+      margin-bottom: 3rem;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  .logo {
+    width: 9rem;
+    height: 1.5rem;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .iconsContainer {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+  }
+
+  .rectangle {
+    left: 3rem;
+    transform: translate(0%, 0%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    padding: 1.5rem 10% 3rem 10%;
+    & ul {
+      position: absolute;
+      top: 0.5rem;
+      right: 10%;
+      & li {
+        margin: 0 0 0 2rem;
+      }
+    }
+    & p {
+      width: 50%;
+    }
+  }
+
+  .rectangle {
+    left: 10%;
+  }
+
+  .iconsContainer {
+    right: calc(10% - 0.5rem);
+    bottom: 40%;
+  }
+}

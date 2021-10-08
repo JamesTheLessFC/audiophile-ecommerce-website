@@ -1,0 +1,263 @@
+@import "./variables.scss";
+
+.root {
+  margin-bottom: 7rem;
+  margin-top: 4rem;
+}
+
+.product {
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  &:first-child {
+    margin: 0;
+  }
+  & h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: $black;
+    font-size: 1.75rem;
+    letter-spacing: 0.125rem;
+    margin: 0;
+  }
+  & button {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid $black;
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625rem;
+    color: $black;
+    background-color: transparent;
+    margin-top: 2rem;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  &_zx9_speaker {
+    background-color: $orange;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    & h2 {
+      color: $white;
+      font-size: 2.25rem;
+      letter-spacing: 0.080625rem;
+      line-height: 2.5rem;
+      margin: 14rem 0 0 0;
+      position: relative;
+    }
+    & p {
+      color: $white;
+      opacity: 0.75;
+      font-size: 0.9375rem;
+      letter-spacing: 0;
+      line-height: 1.5625rem;
+      margin: 2rem 0 0 0;
+      position: relative;
+    }
+    & button {
+      color: $white;
+      background-color: $black;
+      border: none;
+      position: relative;
+      &:hover {
+        background-color: $semi-dark-gray;
+        color: $white;
+      }
+    }
+  }
+  &_zx7_speaker {
+    margin: 1.5rem 0;
+  }
+  &_yx1_earphones:last-child {
+    background-color: $light-gray;
+    display: flex;
+    align-items: center;
+    min-height: 12.375rem;
+    padding-left: 5%;
+    margin-top: 1.5rem;
+  }
+}
+
+.positioned_text {
+  position: absolute;
+  transform: translate(0%, -50%);
+  top: 50%;
+  left: 5%;
+}
+
+.pattern_circles {
+  width: 33rem;
+  height: 33rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: -7rem;
+}
+
+.image_speaker_zx9 {
+  width: 10rem;
+  height: 12rem;
+  position: absolute;
+  left: 50%;
+  top: 3.25rem;
+  transform: translate(-50%, 0%);
+  z-index: 0;
+}
+
+.image_speaker_zx7_container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &_mobile {
+    padding-bottom: 97.86%;
+  }
+  &_tablet {
+    padding-bottom: 46.44%;
+    display: none;
+  }
+  &_desktop {
+    padding-bottom: 28.83%;
+    display: none;
+  }
+}
+
+.image_earphones_yx1_container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &_mobile {
+    padding-bottom: 61.16%;
+  }
+  &_tablet {
+    padding-bottom: 94.4%;
+    display: none;
+  }
+  &_desktop {
+    padding-bottom: 59.26%;
+    display: none;
+  }
+}
+
+.image_speaker_zx7,
+.image_earphones_yx1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 576px) {
+  .product {
+    &_yx1_earphones:last-child {
+      min-height: 15rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    margin-top: 0;
+  }
+
+  .product_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .product {
+    width: 100%;
+    &_zx9_speaker {
+      & p {
+        width: 50%;
+        margin: 2rem auto 0 auto;
+      }
+    }
+    &_yx1_earphones {
+      width: calc(50% - 0.75rem);
+    }
+    &_yx1_earphones:last-child {
+      margin-top: 0;
+    }
+  }
+
+  .image_speaker_zx7_container,
+  .image_earphones_yx1_container {
+    &_mobile {
+      display: none;
+    }
+    &_tablet {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .product {
+    &_zx9_speaker {
+      text-align: left;
+      height: 31rem;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 3rem 3rem 60%;
+      & h2 {
+        text-align: left;
+        margin-top: auto;
+      }
+      & p {
+        margin: 2rem 0 0 0;
+        width: 100%;
+      }
+      & button {
+        margin-bottom: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .pattern_circles {
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, 0%);
+    top: -1rem;
+  }
+
+  .image_speaker_zx9 {
+    width: 20rem;
+    height: 24rem;
+    position: absolute;
+    left: 25%;
+    top: 7.5rem;
+    transform: translate(-50%, 0%);
+  }
+
+  .image_speaker_zx7_container {
+    &_tablet {
+      display: none;
+    }
+    &_desktop {
+      display: block;
+    }
+  }
+
+  .image_earphones_yx1_container {
+    &_tablet {
+      display: none;
+    }
+    &_desktop {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .positioned_text {
+    left: 10%;
+  }
+}
